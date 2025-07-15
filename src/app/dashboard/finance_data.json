@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "title": "Gehalt",
+    "type": "income",
+    "amount": 3200,
+    "date": "2024-01-31",
+    "category": "Salary",
+    "notes": "Netto Gehalt Januar"
+  },
+  {
+    "id": 2,
+    "title": "Miete",
+    "type": "expense",
+    "amount": 900,
+    "date": "2024-02-01",
+    "category": "Housing",
+    "notes": "Monatsmiete Wohnung"
+  },
+  {
+    "id": 3,
+    "title": "Lebensmittel",
+    "type": "expense",
+    "amount": 350,
+    "date": "2024-02-05",
+    "category": "Groceries",
+    "notes": "Wocheneinkauf"
+  },
+  {
+    "id": 4,
+    "title": "Stromrechnung",
+    "type": "expense",
+    "amount": 90,
+    "date": "2024-02-10",
+    "category": "Utilities",
+    "notes": "Strom für Januar"
+  },
+  {
+    "id": 5,
+    "title": "Spotify Abo",
+    "type": "expense",
+    "amount": 10,
+    "date": "2024-02-12",
+    "category": "Entertainment",
+    "notes": "Monatsabo"
+  },
+  {
+    "id": 6,
+    "title": "Freiberufliches Projekt",
+    "type": "income",
+    "amount": 800,
+    "date": "2024-02-15",
+    "category": "Freelance",
+    "notes": "Design Auftrag"
+  },
+  {
+    "id": 7,
+    "title": "Restaurantbesuch",
+    "type": "expense",
+    "amount": 60,
+    "date": "2024-02-18",
+    "category": "Dining",
+    "notes": "Abendessen mit Freunden"
+  },
+  {
+    "id": 8,
+    "title": "Steuererstattung",
+    "type": "income",
+    "amount": 500,
+    "date": "2024-02-20",
+    "category": "Other",
+    "notes": "Finanzamt Rückzahlung"
+  },
+  {
+    "id": 9,
+    "title": "Fitnessstudio",
+    "type": "expense",
+    "amount": 50,
+    "date": "2024-02-22",
+    "category": "Health",
+    "notes": "Monatsbeitrag"
+  },
+  {
+    "id": 10,
+    "title": "Handyrechnung",
+    "type": "expense",
+    "amount": 30,
+    "date": "2024-02-25",
+    "category": "Utilities",
+    "notes": "Tarif Februar"
+  }
+]
