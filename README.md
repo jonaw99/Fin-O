@@ -1,3 +1,18 @@
+# Finance Project
+
+## Usage
+To run the project, you can use the following commands:
+
+```bash
+# Install dependencies
+yarn install
+```
+
+```bash
+# Start the development server
+vite
+```
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
