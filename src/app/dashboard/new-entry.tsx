@@ -8,9 +8,18 @@ import { ThemeProvider } from "@/components/theme-provider"
 import {DataTable} from "@/components/data-table.tsx";
 
 
-import data from "./data.json";
+// import data from "./data.json";
+import data from "./finance_data.json";
+import type {FinanceItem} from "@/app/dashboard/FinanceItem.ts";
 
 export default function NewEntry() {
+
+    const parsedData: FinanceItem[] = data.map((item) => ({
+        ...item,
+        type: item.type === "income" ? "income" : "expense",
+        date: new Date(item.date),
+    }))
+
     return (
         <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
             <SidebarProvider
@@ -31,7 +40,7 @@ export default function NewEntry() {
                                 {/*<div className="px-4 lg:px-6">*/}
                                 {/*    <ChartAreaInteractive />*/}
                                 {/*</div>*/}
-                                <DataTable data={data} />
+                                <DataTable initialData={parsedData} />
                             </div>
                         </div>
                     </div>

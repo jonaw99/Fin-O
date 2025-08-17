@@ -1,9 +1,9 @@
 export interface FinanceItem {
     id: number
     title: string
-    type: string
+    type: "income" | "expense"
     amount: number
-    date: string
+    date: Date
     category: string
     notes?: string
 }
