@@ -32,4 +32,5 @@ jobs:
         yarn install
     - name: Run
       run: |
+        cd frontend
         yarn dev
