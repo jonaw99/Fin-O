@@ -37,5 +37,5 @@ jobs:
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v4
       with:
-        deploy_key: ${{ secrets.GitHub_Pages_FIN }}
+        deploy_key: ${{ secrets.DEPLOY_KEY }}
         publish_dir: ./frontend/dist
