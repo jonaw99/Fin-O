@@ -28,6 +28,7 @@ jobs:
         cd backend && uv sync
     - name: Install FE Dependencies
       run: |
+        cd frontend
         yarn install
     - name: Run
       run: |
