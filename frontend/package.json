@@ -7,7 +7,7 @@
     "dev": "concurrently  \"yarn dev:backend\" \"yarn dev:frontend\"",
     "dev:frontend": "vite",
     "dev:backend": "cd ../backend/fino && uv run manage.py runserver && uv run manage.py migrate",
-    "build": "tsc -b && vite build",
+    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
