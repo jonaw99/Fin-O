@@ -34,3 +34,6 @@ jobs:
       run: |
         cd frontend
         yarn build
+    - uses: peaceiris/actions-gh-pages@v3
+      with:
+        publish_dir: ./frontend/dist
