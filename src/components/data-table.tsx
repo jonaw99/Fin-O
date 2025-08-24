@@ -33,6 +33,16 @@ import {
   // IconTrendingUp,
 } from "@tabler/icons-react"
 import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+import {
   type ColumnDef,
   type ColumnFiltersState,
   flexRender,
@@ -345,10 +355,10 @@ export function DataTable({ initialData }: { initialData: FinanceItem[] }) {
             <SelectValue placeholder="Select a view" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="outline">Outline</SelectItem>
-            <SelectItem value="past-performance">Past Performance</SelectItem>
-            <SelectItem value="key-personnel">Key Personnel</SelectItem>
-            <SelectItem value="focus-documents">Focus Documents</SelectItem>
+            <SelectItem value="outline">All Entries</SelectItem>
+            {/*<SelectItem value="past-performance">Past Performance</SelectItem>*/}
+            {/*<SelectItem value="key-personnel">Key Personnel</SelectItem>*/}
+            {/*<SelectItem value="focus-documents">Focus Documents</SelectItem>*/}
           </SelectContent>
         </Select>
         <TabsList className="**:data-[slot=badge]:bg-muted-foreground/30 hidden **:data-[slot=badge]:size-5 **:data-[slot=badge]:rounded-full **:data-[slot=badge]:px-1 @4xl/main:flex">
@@ -395,10 +405,69 @@ export function DataTable({ initialData }: { initialData: FinanceItem[] }) {
                 })}
             </DropdownMenuContent>
           </DropdownMenu>
-          <Button variant="outline" size="sm">
-            <IconPlus />
-            <span className="hidden lg:inline">Add Section</span>
-          </Button>
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button variant="outline" size="sm">
+                <IconPlus />
+                <span className="hidden lg:inline">Add Entry</span>
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-[500px]">
+              <DialogHeader>
+                <DialogTitle>Neuen Eintrag hinzufügen</DialogTitle>
+                <DialogDescription>
+                  Füge hier eine neue Einnahme oder Ausgabe hinzu.
+                </DialogDescription>
+              </DialogHeader>
+
+              <form className="grid gap-4 py-4">
+                <div className="grid gap-2">
+                  <Label htmlFor="title">Titel</Label>
+                  <Input id="title" name="title" placeholder="z. B. Miete, Gehalt" />
+                </div>
+
+                <div className="grid gap-2">
+                  <Label htmlFor="type">Typ</Label>
+                  <Select name="type" defaultValue="expense">
+                    <SelectTrigger>
+                      <SelectValue placeholder="Typ wählen" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="income">Einnahme</SelectItem>
+                      <SelectItem value="expense">Ausgabe</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                <div className="grid gap-2">
+                  <Label htmlFor="amount">Betrag (€)</Label>
+                  <Input id="amount" name="amount" type="number" step="10" />
+                </div>
+
+                <div className="grid gap-2">
+                  <Label htmlFor="date">Datum</Label>
+                  <Input id="date" name="date" type="date" />
+                </div>
+
+                <div className="grid gap-2">
+                  <Label htmlFor="category">Kategorie</Label>
+                  <Input id="category" name="category" placeholder="z. B. Wohnen, Freizeit" />
+                </div>
+
+                <div className="grid gap-2">
+                  <Label htmlFor="notes">Notizen</Label>
+                  <Input id="notes" name="notes" placeholder="Optional" />
+                </div>
+
+                <DialogFooter>
+                  <DialogClose asChild>
+                    <Button variant="outline">Abbrechen</Button>
+                  </DialogClose>
+                  <Button type="submit">Speichern</Button>
+                </DialogFooter>
+              </form>
+            </DialogContent>
+          </Dialog>
         </div>
       </div>
       <TabsContent

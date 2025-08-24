@@ -27,6 +27,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
+import {AccentColorToggle} from "@/components/accent-color-toggle.tsx";
 
 const data = {
   user: {
@@ -170,6 +171,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         {/*<NavSecondary items={data.navSecondary} className="mt-auto" />*/}
       </SidebarContent>
       <SidebarFooter>
+        <AccentColorToggle/>
         {/*<NavUser user={data.user} />*/}
       </SidebarFooter>
     </Sidebar>
