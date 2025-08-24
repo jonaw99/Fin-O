@@ -9,8 +9,8 @@ yarn install
 ```
 
 ```bash
-# Start the development server
-vite
+# Start the frontend & backend
+yarn dev
 ```
 
 # React + TypeScript + Vite
