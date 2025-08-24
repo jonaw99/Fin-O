@@ -30,7 +30,3 @@ jobs:
       run: |
         cd frontend
         yarn install
-    - name: Run
-      run: |
-        cd frontend
-        yarn dev
