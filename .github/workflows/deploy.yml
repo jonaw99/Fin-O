@@ -34,7 +34,8 @@ jobs:
       run: |
         cd frontend
         yarn build
-    - uses: peaceiris/actions-gh-pages@v3
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v4
       with:
-        github_token: ${{ secrets.GitHub_Pages_FIN }}
+        deploy_key: ${{ secrets.GitHub_Pages_FIN }}
         publish_dir: ./frontend/dist
