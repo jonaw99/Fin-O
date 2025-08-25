@@ -21,14 +21,14 @@ from rest_framework import routers
 
 from finance_app.views import FinanceItemViewSet
 
-router = routers.DefaultRouter()
-router.register(r'finance-items', FinanceItemViewSet)
+api_router = routers.DefaultRouter()
+api_router.register(r'finance-items', FinanceItemViewSet)
 
 urlpatterns = [
     # Django Admin
     path('admin/', admin.site.urls),
     
     # API URLs
-    path('', include(router.urls)),
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path('api/', include(api_router.urls)),
+    # path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 ]
