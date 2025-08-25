@@ -4,7 +4,7 @@ import NewEntry from "@/app/dashboard/new-entry.tsx";
 
 export default function App() {
     return (
-        <Router>
+        <Router basename="/Fin-O">
             <Routes>
                 <Route path="/" element={<Page />} />
                 <Route path="/dashboard" element={<Page />} />
