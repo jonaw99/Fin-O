@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from rest_framework import permissions, viewsets
+from rest_framework import viewsets
 
 from .serializers import FinanceItemSerializer
 from .models import FinanceItem
@@ -12,4 +12,3 @@ class FinanceItemViewSet(viewsets.ModelViewSet):
     """
     queryset = FinanceItem.objects.all()
     serializer_class = FinanceItemSerializer
-    permission_classes = [permissions.IsAuthenticated]
