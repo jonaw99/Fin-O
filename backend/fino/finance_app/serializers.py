@@ -4,7 +4,8 @@ from rest_framework import serializers
 class FinanceItemSerializer(serializers.ModelSerializer):
     category = serializers.SlugRelatedField(
         slug_field='name',
-        queryset=FinanceItemCategory.objects.all()
+        queryset=FinanceItemCategory.objects.all(),
+        allow_null=True,
     )
     
     class Meta:
