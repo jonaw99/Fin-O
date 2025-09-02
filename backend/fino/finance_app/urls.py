@@ -2,10 +2,11 @@ from django.urls import include, path
 
 from rest_framework import routers
 
-from .views import FinanceItemViewSet
+from .views import FinanceItemViewSet, FinanceItemCategoryViewSet
 
 api_router = routers.DefaultRouter()
 api_router.register(r'finance-items', FinanceItemViewSet)
+api_router.register(r'finance-item-categories', FinanceItemCategoryViewSet)
 
 urlpatterns = [
     path('', include(api_router.urls)),
