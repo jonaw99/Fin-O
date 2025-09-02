@@ -17,18 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
-from rest_framework import routers
-
-from finance_app.views import FinanceItemViewSet
-
-api_router = routers.DefaultRouter()
-api_router.register(r'finance-items', FinanceItemViewSet)
 
 urlpatterns = [
     # Django Admin
     path('admin/', admin.site.urls),
     
-    # API URLs
-    path('api/', include(api_router.urls)),
-    # path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path('api/', include('finance_app.urls')),
 ]
